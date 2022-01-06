@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Http;
 
 class Test extends Controller
 {
-    public function fetch() {
-
+    public function index() {
+        $data = PickVisa::all();
+        return view('welcome', ['data'=>$data]);
     }
 }

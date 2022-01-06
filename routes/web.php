@@ -13,7 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/fetch', [\App\Http\Controllers\Test::class, 'fetch']);
+Route::get('/', [\App\Http\Controllers\Test::class, 'index']);
