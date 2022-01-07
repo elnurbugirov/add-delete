@@ -24,9 +24,10 @@ class Test extends Controller
 
         if(!array_key_exists($slug,$cache_data)) {
             $country = $this->countryStoreCache($slug,$cache_data);
+            return view('country', ['data'=>$country['diplomatic_missions']]);
         }
-        return view('country', ['data'=>$cache_data[$slug]['diplomatic_missions']]);
 
+        return view('country', ['data'=>$cache_data[$slug]['diplomatic_missions']]);
     }
 
     public function countryStoreCache($slug,$countries)
