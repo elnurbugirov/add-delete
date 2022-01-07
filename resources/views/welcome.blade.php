@@ -1,3 +1,3 @@
 @foreach($data as $d)
-    {{$d->display_name}} <br>
+    <a href="{{ ('country/'.$d->slug)}}">{{$d->display_name}} <br></a>
 @endforeach

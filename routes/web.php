@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\Test::class, 'index']);
+Route::get('/country/{slug}', [\App\Http\Controllers\Test::class, 'dataCountry']);
